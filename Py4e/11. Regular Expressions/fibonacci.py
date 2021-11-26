@@ -7,7 +7,12 @@ def fibonacci(n):
         return 1
     else:
         return fibonacci(n-1) + fibonacci(n-2)
- 
-a = input("Enter Fibonacci sequence index: ")
-value = int(a)
-print(fibonacci(value))
+
+try:
+    a = input("Enter Fibonacci sequence index: ")
+    value = int(a)
+    print(fibonacci(value))
+except:
+    print("Input must be a number!")
+
+
