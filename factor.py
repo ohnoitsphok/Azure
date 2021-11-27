@@ -1,16 +1,19 @@
-num = 1
-def factorial(num, a):
+def factorial(a):
     if a < 0:
         print("Invalid")
-    elif a == 0:
+    elif a <= 1:
         return 1
     else:
-        for value in range(1, a + 1):
-            num = num * value
-        return num
-        
-try: 
-    a = int(input("Enter factorial: "))
-    print(factorial(num, a))
-except:
-    print("Input must be a number")
+        return a*factorial(a-1) 
+
+def inputNumber():
+    while True:
+        try: 
+            a = int(input("Enter factorial: "))
+            print(factorial(a))
+            break
+        except:
+            print("Input must be a number")
+            continue
+
+inputNumber()
