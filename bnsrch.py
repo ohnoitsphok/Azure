@@ -51,7 +51,7 @@ def program():
         lst.sort()
 
         if findNum in lst:
-            print("Number is at " + str(binarySearch(lst, findNum) - 1) + " in list")
+            print("Number is at " + str(binarySearch(lst, findNum) + 1) + " in list")
             continue
         else:
             print("Number not in list")
